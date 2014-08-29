@@ -1,0 +1,8 @@
+<% content_for(:page_header, 'Create a subEffit') %>
+
+<%= render("errors") %>
+
+<form action="/sections/<%= @section.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+<%= render("section_form") %>
+</form>
