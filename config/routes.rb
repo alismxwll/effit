@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  match('/', {via: :get, to: 'sections#index'})
-  match('sections/new', {via: :get, to: 'sections#new'})
-  match('sections', {via: :post, to: 'sections#create'})
-  match('sections/:id', {via: :get, to: 'sections#show'})
-  match('sections/:id/edit', {via: :get, to: 'sections#edit'})
-  match('sections/:id', {via: [:patch, :put], to: 'sections#update'})
-  match('sections/:id', {via: :delete, to: 'sections#destroy'})
+  match('/', {via: :get, to: 'effit#index'})
+  match('effit/new', {via: :get, to: 'effit#new'})
+  match('effit', {via: :post, to: 'effit#create'})
+  match('effit/:id', {via: :get, to: 'effit#show'})
+  match('effit/:id/edit', {via: :get, to: 'effit#edit'})
+  match('effit/:id', {via: [:patch, :put], to: 'effit#update'})
+  match('effit/:id', {via: :delete, to: 'effit#destroy'})
 end
