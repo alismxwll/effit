@@ -1,7 +1,7 @@
-<% if @section.errors.any? %>
+<% if @e.errors.any? %>
 <h3>We seem to have a problem..</h3>
   <ul>
-    <% @section.errors.full_messages.each do |message| %>
+    <% @e.errors.full_messages.each do |message| %>
     <li><%= message %></li>
     <% end %>
   </ul>

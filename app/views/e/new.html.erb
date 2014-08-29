@@ -2,7 +2,7 @@
 
 <%= render("errors") %>
 
-<form action="/sections/<%= @section.id %>" method="post">
+<form action="/e/<%= @e.id %>" method="post">
   <input name="_method" type="hidden" value="patch">
-<%= render("section_form") %>
+<%= render("e_form") %>
 </form>

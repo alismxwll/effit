@@ -1,0 +1,7 @@
+<% content_for(:page_header, 'Effit') %>
+
+<ul>
+  <%@es.each do |e| %>
+  <li><a href="/<%= e.name %>/show"><%= e.name %></a></li>
+  <% end %>
+</ul>
