@@ -1,3 +1,3 @@
-class Section < ActiveRecord::Base
+class Effit < ActiveRecord::Base
   validates :name, presence: true
 end
