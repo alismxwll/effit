@@ -3,5 +3,7 @@
 <ul>
   <%@es.each do |e| %>
   <li><a href="/e/<%= e.id %>/edit"><%= e.name %></a></li>
+  <li><%= e.description %></li>
+  <br>
   <% end %>
 </ul>
