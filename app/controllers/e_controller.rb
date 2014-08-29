@@ -20,7 +20,7 @@ class EController < ApplicationController
   end
  
   def show
-    @e = E.find(params[:id])
+    @e = E.find(params[:e])
     render('e/show.html.erb')
   end
 
