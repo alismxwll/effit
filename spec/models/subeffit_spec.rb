@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe SubEffit do
+describe Subeffit do
   it { should validate_presence_of :name }
   it { should validate_presence_of :description }
 end

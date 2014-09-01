@@ -1,17 +1,17 @@
-class EController < ApplicationController
+class SubeffitsController < ApplicationController
   def index
-    @es = E.all
+    @subeffits = Subeffit.all
     render('e/index.html.erb')
   end
   
   def new
-    @e = E.new
+    @subeffit = Subeffit.new
     render('e/new.html.erb')
   end
   
   def create
-    @e = E.new(params[:e])
-    if @e.save
+    @subeffit = Subeffit.new(params[:subeffit])
+    if @subeffit.save
 #       flash
       redirect_to('/')
     else
@@ -20,18 +20,18 @@ class EController < ApplicationController
   end
  
   def show
-    @e = E.find(params[:e])
+    @subeffit = Subeffit.find(params[:subeffit])
     render('e/show.html.erb')
   end
 
   def edit
-    @e = E.find(params[:id])
+    @subeffit = Subeffit.find(params[:id])
     render('e/edit.html.erb')
   end
   
   def update
-    @e = E.find(params[:id])
-    if @e.update(params[:e])
+    @subeffit = Subeffit.find(params[:id])
+    if @subeffit.update(params[:subeffit])
 #       flash
       redirect_to('/')
     else
@@ -40,8 +40,8 @@ class EController < ApplicationController
   end
 
   def destroy
-    @e = E.find(params[:id])
-    @e.destroy
+    @subeffit = Subeffit.find(params[:id])
+    @subeffit.destroy
 #     flash
     redirect_to('/')
   end

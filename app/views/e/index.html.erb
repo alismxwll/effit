@@ -1,9 +1,11 @@
 <% content_for(:page_header, 'Effit') %>
 
 <ul>
-  <%@es.each do |e| %>
-  <li><a href="/e/<%= e.id %>/edit"><%= e.name %></a></li>
-  <li><%= e.description %></li>
-  <br>
+  <% @subeffits.each do |subeffit| %>
+  <li><a href="/e/<%= subeffit.id %>/edit"><%= subeffit.name %></a></li>
+    <ul>
+      <li><%= subeffit.description %></li>
+    </ul>
+   <br>
   <% end %>
 </ul>
