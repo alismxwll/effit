@@ -1,0 +1,11 @@
+<% content_for(:page_header, 'Effer') %>
+
+<ul>
+  <% @effers.each do |effer| %>
+  <li><a href="/a/<%= effer.id %>/edit"><%= effer.account_name %></a></li>
+    <ul>
+      <li><%= effer.password %></li>
+    </ul>
+   <br>
+  <% end %>
+</ul>
