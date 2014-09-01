@@ -1,0 +1,8 @@
+<% content_for(:page_header, 'Edit your Account') %>
+
+<%= render("errors") %>
+
+<form action="/a/<%= @effer.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render("e_form") %>
+</form>

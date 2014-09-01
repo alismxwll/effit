@@ -20,8 +20,8 @@ class EffersController < ApplicationController
   end
  
   def show
-    @effer = Effer.find(params[:effer])
-    render('a/show.html.erb')
+    @effer = Effer.find(params[:id])
+    render('/a/show.html.erb')
   end
 
   def edit
