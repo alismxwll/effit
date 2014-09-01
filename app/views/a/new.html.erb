@@ -1,0 +1,7 @@
+<% content_for(:page_header, 'Create Your Effer Account') %>
+
+<%= render("errors") %>
+
+<form action="/a/<%= @effer.id %>" method="post">
+<%= render("e_form") %>
+</form>

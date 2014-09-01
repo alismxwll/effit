@@ -13,7 +13,7 @@ class EffersController < ApplicationController
     @effer = Effer.new(params[:effer])
     if @effer.save
 #       flash
-      redirect_to('a/')
+      redirect_to('/a/')
     else
       render('a/new.html.erb')
     end
@@ -33,7 +33,7 @@ class EffersController < ApplicationController
     @effer = Effer.find(params[:id])
     if @effer.update(params[:effer])
 #       flash
-      redirect_to('a/')
+      redirect_to('/a/')
     else
       render('a/edit.html.erb')
     end
