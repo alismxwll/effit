@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   match('e/:id', {via: :delete, to: 'subeffits#destroy'})
   
   match('a', {via: :get, to: 'effers#index'})
+  match('a/', {via: :get, to: 'effers#index'})
   match('a/new', {via: :get, to: 'effers#new'})
   match('a/:id', {via: :get, to: 'effers#show'})
   match('a/', {via: :post, to: 'effers#create'})
