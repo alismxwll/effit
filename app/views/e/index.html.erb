@@ -2,7 +2,7 @@
 
 <ul>
   <% @subeffits.each do |subeffit| %>
-  <li><a href="/e/<%= subeffit.id %>/edit"><%= subeffit.name %></a></li>
+  <li><a href="/e/<%= subeffit.id %>/"><%= subeffit.name %></a></li>
     <ul>
       <li><%= subeffit.description %></li>
     </ul>

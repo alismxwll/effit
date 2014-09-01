@@ -20,7 +20,7 @@ class SubeffitsController < ApplicationController
   end
  
   def show
-    @subeffit = Subeffit.find(params[:subeffit])
+    @subeffit = Subeffit.find(params[:id])
     render('e/show.html.erb')
   end
 
