@@ -13,12 +13,12 @@
     <li><a href="/e/new">New Effit</a></li>
     <li><a href="/a/new">Create Account</a></li>
     <li><a href="/a/">All Accounts</a></li>
-    <%= flash[:alert] %>
-    <%= flash[:notice] %>
   </ul>
 </div>
 <body>
   <blockquote>
+    <%= flash[:alert] %>
+    <%= flash[:notice] %>
     <h1><%= yield(:page_header) %></h1>
   </blockquote>
 <%= yield %>

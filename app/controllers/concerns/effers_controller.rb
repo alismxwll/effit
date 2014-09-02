@@ -11,8 +11,8 @@ class EffersController < ApplicationController
   
   def create
     @effer = Effer.new(params[:effer])
+    flash[:notice] = "Your Account has been added."
     if @effer.save
-#       flash
       redirect_to('/a/')
     else
       render('a/new.html.erb')
@@ -31,8 +31,8 @@ class EffersController < ApplicationController
   
   def update
     @effer = Effer.find(params[:id])
+    flash[:notice] = "Your account has been updated."
     if @effer.update(params[:effer])
-#       flash
       redirect_to('/a/')
     else
       render('a/edit.html.erb')
@@ -41,6 +41,7 @@ class EffersController < ApplicationController
 
   def destroy
     @effer = Effer.find(params[:id])
+    flash[:notice] = "Your account has been removed."
     @effer.destroy
 #     flash
     redirect_to('/')
