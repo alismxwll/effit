@@ -1,0 +1,14 @@
+<% content_for(:page_header, 'Edit your postit') %>
+<% content_for(:sub_header, 'Just Do It') %>
+<%= @effer.account_name %>
+
+<%= render("errors") %>
+
+<form action="/p/<%= @postit.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <%= render("e_form") %>
+   <a href="/p/<%= @postit.id %>"
+   data-confirm="Your Postit will be deleted."
+   data-method="delete"
+   rel="nofollow">Delete</a>
+</form>

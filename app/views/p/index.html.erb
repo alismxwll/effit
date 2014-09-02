@@ -3,15 +3,10 @@
 
 <ul>
   <% @postits.each do |postit| %>
-  <li><a href="/p/<%= postit.id %>/"><%= postit.name %></a></li>
-    <ul>
-      <% @effers.each do |effer| %>
-        <li><a href="a%= effer.id %>/"><%= effer.account_name %></a></li>
-      <% end %>
-    </ul>  
-    <ul>
-      <li><%= postit.description %></li>
-    </ul>
-   <br>
+    <li><a href="/p/<%= postit.id %>/"><%= postit.name %></a></li>  
+      <ul>
+        <li><%= postit.content %></li>
+      </ul>
+     <br>
   <% end %>
 </ul>

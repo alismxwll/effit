@@ -1,11 +1,11 @@
 class PostitsController < ApplicationController
   def index
-    @effers = Effer.all
     @postits = Postit.all
     render('p/index.html.erb')
   end
   
   def new
+    @effer = Effer.find(:id)
     @postit = Postit.new
     render('p/new.html.erb')
   end
@@ -26,6 +26,7 @@ class PostitsController < ApplicationController
   end
 
   def edit
+    @effer = Effer.find(params[:id])
     @postit = Postit.find(params[:id])
     render('p/edit.html.erb')
   end
