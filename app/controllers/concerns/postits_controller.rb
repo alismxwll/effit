@@ -1,6 +1,6 @@
 class PostitsController < ApplicationController
   def index
-    @postits = Postit.all
+    @postits = Postit.all.order(:updated_at)
     render('p/index.html.erb')
   end
   
