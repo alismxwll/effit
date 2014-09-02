@@ -5,6 +5,6 @@
 
 <% @subeffit.postits.each do |postit| %>
   <ul>
-    <li><a href='/p/<%= postit.id %>'></a><%= postit.name %></li>
+    <li><a href='/p/<%= postit.id %>'><%= postit.name %></a></li>
 </ul>
 <% end %>
