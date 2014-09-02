@@ -1,6 +1,6 @@
 class SubeffitsController < ApplicationController
   def index
-    @subeffits = Subeffit.all
+    @subeffits = Subeffit.all.order(:updated_at)
     render('e/index.html.erb')
   end
   
