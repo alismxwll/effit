@@ -6,7 +6,6 @@ class PostitsController < ApplicationController
   
   def new
     @subeffits = Subeffit.all
-    @effer
     @postit = Postit.new
     render('p/new.html.erb')
   end
@@ -22,14 +21,12 @@ class PostitsController < ApplicationController
   end
  
   def show
-    @effer
     @postit = Postit.find(params[:id])
     render('p/show.html.erb')
   end
 
   def edit
     @subeffits = Subeffit.all
-    @effer = Effer.find(params[:id])
     @postit = Postit.find(params[:id])
     render('p/edit.html.erb')
   end
