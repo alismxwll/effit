@@ -1,5 +1,6 @@
 class PostitsController < ApplicationController
   def index
+    @effers = Effer.all
     @postits = Postit.all
     render('p/index.html.erb')
   end

@@ -1,0 +1,8 @@
+<% content_for(:page_header, 'Create a Postit') %>
+<% content_for(:sub_header, 'Just Do It') %>
+
+<%= render("errors") %>
+
+<form action="/p/<%= @postit.id %>" method="post">
+<%= render("e_form") %>
+</form>

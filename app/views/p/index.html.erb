@@ -1,9 +1,14 @@
-<% content_for(:page_header, 'Effit') %>
+<% content_for(:page_header, 'Postit') %>
 <% content_for(:sub_header, 'Just Do It') %>
 
 <ul>
   <% @postits.each do |postit| %>
   <li><a href="/p/<%= postit.id %>/"><%= postit.name %></a></li>
+    <ul>
+      <% @effers.each do |effer| %>
+        <li><a href="a%= effer.id %>/"><%= effer.account_name %></a></li>
+      <% end %>
+    </ul>  
     <ul>
       <li><%= postit.description %></li>
     </ul>
