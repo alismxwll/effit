@@ -11,8 +11,8 @@ class SubeffitsController < ApplicationController
   
   def create
     @subeffit = Subeffit.new(params[:subeffit])
-    flash[:notice] = "Your subEffit has been added."
     if @subeffit.save
+      flash[:notice] = "Your subEffit has been added."
       redirect_to('/')
     else
       render('e/new.html.erb')
@@ -31,8 +31,8 @@ class SubeffitsController < ApplicationController
   
   def update
     @subeffit = Subeffit.find(params[:id])
-    flash[:notice] = "Your subEffit has been updated."
     if @subeffit.update(params[:subeffit])
+      flash[:notice] = "Your subEffit has been updated."
       redirect_to('/')
     else
       render('e/edit.html.erb')
@@ -41,8 +41,8 @@ class SubeffitsController < ApplicationController
 
   def destroy
     @subeffit = Subeffit.find(params[:id])
-    flash[:notice] = "Your subEffit has been removed."
     @subeffit.destroy
+    flash[:notice] = "Your subEffit has been removed."
     redirect_to('/')
   end
 end

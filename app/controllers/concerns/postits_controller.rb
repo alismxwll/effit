@@ -12,8 +12,8 @@ class PostitsController < ApplicationController
   
   def create
     @postit = Postit.new(params[:postit])
-    flash[:notice] = "Your Postit has been added."
     if @postit.save
+      flash[:notice] = "Your Postit has been added."
       redirect_to('/')
     else
       render('p/new.html.erb')
@@ -32,8 +32,8 @@ class PostitsController < ApplicationController
   
   def update
     @postit = Postit.find(params[:id])
-    flash[:notice] = "Your Postit has been updated."
     if @postit.update(params[:postit])
+      flash[:notice] = "Your Postit has been updated."
       redirect_to('/')
     else
       render('p/edit.html.erb')
@@ -42,8 +42,8 @@ class PostitsController < ApplicationController
 
   def destroy
     @postit = Postit.find(params[:id])
-    flash[:notice] = "Your Postit has been removed."
     @postit.destroy
+    flash[:notice] = "Your Postit has been removed."
     redirect_to('/')
   end
 end
