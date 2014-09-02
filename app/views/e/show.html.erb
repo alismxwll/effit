@@ -2,3 +2,9 @@
 <% content_for(:sub_header, 'Just Do It') %>
 
 <li><a href="/e/<%= @subeffit.id %>/edit"><%= @subeffit.name %></a></li>
+
+<% @subeffit.postits.each do |postit| %>
+  <ul>
+    <li><a href='/p/<%= postit.id %>'></a><%= postit.name %></li>
+</ul>
+<% end %>

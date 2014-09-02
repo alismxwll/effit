@@ -5,7 +5,8 @@ class PostitsController < ApplicationController
   end
   
   def new
-    @effer = Effer.find(:id)
+    @subeffits = Subeffit.all
+    @effer
     @postit = Postit.new
     render('p/new.html.erb')
   end
@@ -14,18 +15,20 @@ class PostitsController < ApplicationController
     @postit = Postit.new(params[:postit])
     if @postit.save
       flash[:notice] = "Your Postit has been added."
-      redirect_to('/')
+      redirect_to("/p/#{@postit.id}")
     else
       render('p/new.html.erb')
     end
   end
  
   def show
+    @effer
     @postit = Postit.find(params[:id])
     render('p/show.html.erb')
   end
 
   def edit
+    @subeffits = Subeffit.all
     @effer = Effer.find(params[:id])
     @postit = Postit.find(params[:id])
     render('p/edit.html.erb')

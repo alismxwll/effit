@@ -1,0 +1,5 @@
+<% content_for(:page_header, 'Postit') %>
+<% content_for(:sub_header, 'Just Do It') %>
+
+<li><a href="/p/<%= @postit.id %>/edit"><%= @postit.name %></a></li>
+<li><%= @postit.content %></li>

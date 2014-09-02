@@ -5,6 +5,7 @@ class SubeffitsController < ApplicationController
   end
   
   def new
+    @postit = Postit.new
     @subeffit = Subeffit.new
     render('e/new.html.erb')
   end
@@ -13,7 +14,8 @@ class SubeffitsController < ApplicationController
     @subeffit = Subeffit.new(params[:subeffit])
     if @subeffit.save
       flash[:notice] = "Your subEffit has been added."
-      redirect_to('/')
+      flash[:alert] = "Make the first post. or it wont work."
+      redirect_to('/p/new')
     else
       render('e/new.html.erb')
     end
