@@ -11,6 +11,7 @@ class SubeffitsController < ApplicationController
   
   def create
     @subeffit = Subeffit.new(params[:subeffit])
+    flash[:notice] = "Your subEffit has been added."
     if @subeffit.save
 #       flash
       redirect_to('/')
